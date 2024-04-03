@@ -8,7 +8,7 @@
   <a href='https://arxiv.org/pdf/2403.13307.pdf'>
     <img src='https://img.shields.io/badge/Paper-PDF-yellow?style=flat&logo=arXiv&logoColor=yellow'>
   </a>
-  <a href='https://4dvlab.github.io/project_page/hucenlife.html'>
+  <a href='https://4dvlab.github.io/project_page/laserhuman.html'>
   <img src='https://img.shields.io/badge/Project-Page-orange?style=flat&logo=Google%20chrome&logoColor=orange'></a>
   <!-- <a href='https://youtu.be/0a0ZYJgzdWE'>
   <img src='https://img.shields.io/badge/YouTube-Video-EA3323?style=flat&logo=youtube&logoColor=EA3323'></a> -->
@@ -20,12 +20,13 @@
   <img  width="1000" src="./assets/page1.gif"/>
 </p>
 
-<!-- <p float="center">
-  <img  width="1000" src="./assets/teasor.png"/>
-</p> -->
+
 
 
 Language-guided scene-aware human motion generation has great significance for entertainment and robotics. In response to the limitations of existing datasets, we introduce LaserHuman, a pioneer- ing dataset engineered to revolutionize Scene-Text-to-Motion research. LaserHuman stands out with its inclusion of genuine human motions within 3D environments, unbounded free-form natural language descrip- tions, a blend of indoor and outdoor scenarios, and dynamic, ever-changing scenes. Diverse modalities of capture data and rich annotations present great opportunities for the research of conditional motion generation,and can also facilitate the development of real-life applications. More- over, to generate semantically consistent and physically plausible human motions, we propose a multi-conditional diffusion model, which is simple but effective, achieving state-of-the-art performance on existing datasets.
+<p float="center">
+  <img  width="1000" src="./assets/teasor.png"/>
+</p>
 
 ## 💻 Train your own models
 1. Prepare the datasets
