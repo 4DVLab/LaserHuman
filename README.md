@@ -23,7 +23,9 @@
 
 
 
-Language-guided scene-aware human motion generation has great significance for entertainment and robotics. In response to the limitations of existing datasets, we introduce LaserHuman, a pioneer- ing dataset engineered to revolutionize Scene-Text-to-Motion research. LaserHuman stands out with its inclusion of genuine human motions within 3D environments, unbounded free-form natural language descrip- tions, a blend of indoor and outdoor scenarios, and dynamic, ever-changing scenes. Diverse modalities of capture data and rich annotations present great opportunities for the research of conditional motion generation,and can also facilitate the development of real-life applications. More- over, to generate semantically consistent and physically plausible human motions, we propose a multi-conditional diffusion model, which is simple but effective, achieving state-of-the-art performance on existing datasets.
+Language-guided scene-aware human motion generation has great significance for entertainment and robotics. In response to the limitations of existing datasets, we introduce LaserHuman, which stands out with its inclusion of genuine human motions within 3D environments, unbounded free-form natural language descriptions, a blend of indoor and outdoor scenarios, and dynamic, ever-changing scenes. 
+Diverse modalities of capture data and rich annotations present great opportunities for the research of Scene-Text-to-Motion generation, and can also facilitate the development of real-life applications.
+Moreover, to generate semantically consistent and physically plausible human motions, we propose a multi-conditional diffusion model, which is simple but effective, achieving state-of-the-art performance on existing datasets. 
 
 
 ## 💻 Train your own models
@@ -31,11 +33,32 @@ Language-guided scene-aware human motion generation has great significance for e
 <p float="center">
   <img  width="1000" src="./assets/dataset.png"/>
 </p>
+We release sample of our dataset on  <a href='https://drive.google.com/drive/folders/1VwU57z4yrlgRgsAEHP2CzN_BPBz6eqIZ?usp=drive_link'>Google Drive</a>.
+The annotation is saved in pub_data.pkl for each motion sequence.
 
-2. Ready to train
-   
-...Coming soon.
+Please prepare the dataset as following folder struction:
+```
+./LaserHuman_path
+  └── data/
+      ├──process    # the dense point cloud 
+          ├── spst.ply
+          ├── sistout.ply
+          └── ...
+      ├── pub_data.pkl      
+      ├── pc_img_folder
+          ├── 1
+              ├── pc # store the LiDAR point cloud
+          ├── 2
+              ├── pc 
+          ...
+  └── render_code/
+```
+* data rendering
 
+You can render the motion sequence on the scene: 
+```
+python render.py --id 10 --pkl_path 'data/pub_datas.pkl' --path_root 'data/'
+```
 
 ## License
 All datasets are published under the [Creative Commons Attribution-NonCommercial-ShareAlike](https://creativecommons.org/licenses/by-nc-sa/4.0/).
