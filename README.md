@@ -59,6 +59,8 @@ You can render the motion sequence on the scene:
 ```
 python render.py --id 10 --pkl_path 'data/pub_datas.pkl' --path_root 'data/'
 ```
+A window will first appear to let you adjust the camera view, adjust and close it to display the motion result.
+
 * data instruction
   
 We provide ```data_tutorial.ipynb``` to give the detailed instruction of our data.
