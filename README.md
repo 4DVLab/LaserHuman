@@ -34,6 +34,7 @@ Moreover, to generate semantically consistent and physically plausible human mot
   <img  width="1000" src="./assets/dataset.png"/>
 </p>
 We release sample of our dataset on  <a href='https://drive.google.com/drive/folders/1VwU57z4yrlgRgsAEHP2CzN_BPBz6eqIZ?usp=drive_link'>Google Drive</a>.
+
 The annotation is saved in ```pub_datas.pkl``` for each motion sequence.
 
 Please prepare the dataset as following folder struction:
