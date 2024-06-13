@@ -59,6 +59,9 @@ You can render the motion sequence on the scene:
 ```
 python render.py --id 10 --pkl_path 'data/pub_datas.pkl' --path_root 'data/'
 ```
+* data instruction
+  
+We provide ```data_tutorial.ipynb``` to give the detailed instruction of our data.
 
 ## License
 All datasets are published under the [Creative Commons Attribution-NonCommercial-ShareAlike](https://creativecommons.org/licenses/by-nc-sa/4.0/).
