@@ -20,7 +20,7 @@ def options():
     parser = argparse.ArgumentParser(description='rendering ...')
     parser.add_argument('--pkl_path', type=str, help='pkl path',default='../data/pub_datas.pkl')
     parser.add_argument('--path_root', type=str, help='path_root',default='../data/')
-    parser.add_argument('--id', type=int, help='id',default='10')
+    parser.add_argument('--id', type=int, help='id',default='100')
     args = parser.parse_args()
     return args
 
@@ -37,16 +37,18 @@ os.makedirs('./frames/',exist_ok=True)
 smpl_model = SMPL(SMPL_MODEL_DIR, create_transl=False)
 shape_blob = torch.Tensor(np.loadtxt("./shape.txt"))
     
+
 def main():
     args = options()
     datas = np.load(args.pkl_path,allow_pickle=True)
+    # datas = np.load('./pub_datas.pkl',allow_pickle=True)
     
     index = int(args.id) 
     data = datas[index]
+    print(data.keys())
 
     
     name_id = data['index']
-    # print(name_id)
     dense_name = data['dense']['dense_name']
     R,T = np.array(data['dense']['R']).reshape(3,3),np.array(data['dense']['T'])
 
@@ -70,7 +72,7 @@ def main():
             for j in range(len(verts)):
                 smpl2obj(verts[j], f"{obj_path_instance}/{j}.obj")
 
-    globalR,trans,pose_blob=np.array(data["livehps_op"][:,:3]),np.array(data["livehps_op"][:,3:6]),np.array(data["livehps_op"][:,6:])
+    globalR,trans,pose_blob=np.array(data["smpl_op"][:,:3]),np.array(data["smpl_op"][:,3:6]),np.array(data["smpl_op"][:,6:])
     output = smpl_model(betas=shape_blob.reshape(1,-1), 
                         body_pose=torch.Tensor(pose_blob),      # M*69 (pose[:,3:])
                         global_orient=torch.Tensor(globalR),    # M*3  (pose[:,:3])
