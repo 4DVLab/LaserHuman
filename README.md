@@ -72,13 +72,11 @@ This means that you must attribute the work in the manner specified by the autho
 
 ## Citation
  ```
-@misc{cong2024laserhuman,
-      title={LaserHuman: Language-guided Scene-aware Human Motion Generation in Free Environment}, 
-      author={Peishan Cong and Ziyi Wang and Zhiyang Dou and Yiming Ren and Wei Yin and Kai Cheng and Yujing Sun and Xiaoxiao Long and Xinge Zhu and Yuexin Ma},
-      year={2024},
-      eprint={2403.13307},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{cong2024laserhuman,
+      title={Laserhuman: language-guided scene-aware human motion generation in free environment},
+      author={Cong, Peishan and Wang, Ziyi and Dou, Zhiyang and Ren, Yiming and Yin, Wei and Cheng, Kai and Sun, Yujing and Long, Xiaoxiao and Zhu, Xinge and Ma, Yuexin},
+      journal={arXiv preprint arXiv:2403.13307},
+      year={2024}
 }
  ```
 
